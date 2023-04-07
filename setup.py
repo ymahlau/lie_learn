@@ -26,7 +26,7 @@ extensions = [Extension(file.split('.')[0].replace('/', '.'), [file]) for file i
 if use_cython:
     from Cython.Build import cythonize
 
-    extensions = cythonize(extensions)
+    extensions = cythonize(files)
 
 setup(
     name='lie_learn',
